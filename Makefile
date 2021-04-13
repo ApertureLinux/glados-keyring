@@ -1,4 +1,4 @@
-V=20210413
+# V=20210413
 
 PREFIX = /usr/local
 
@@ -12,9 +12,9 @@ uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/share/pacman/keyrings/glados{.gpg,-trusted,-revoked}
 	rmdir -p --ignore-fail-on-non-empty $(DESTDIR)$(PREFIX)/share/pacman/keyrings/
 
-dist:
-	git archive --format=tar --prefix=glados-keyring-$(V)/ $(V) | gzip -9 > glados-keyring-$(V).tar.gz
-	gpg --detach-sign --use-agent glados-keyring-$(V).tar.gz
+# dist:
+# 	git archive --format=tar --prefix=glados-keyring-$(V)/ $(V) | gzip -9 > glados-keyring-$(V).tar.gz
+# 	gpg --detach-sign --use-agent glados-keyring-$(V).tar.gz
 
 
-.PHONY: install uninstall dist
+.PHONY: install uninstall #dist
