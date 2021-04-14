@@ -22,6 +22,8 @@ Repository for the Aperture Linux keyring package.
 4. git add the new .asc file in the packager directory.
 4. Commit everything as 'Update keyring'
 5. Create a new tag ```git tag -s $(date +"%Y%m%d")```
+  5.1 for multiple releases on the same day append a release number (eg. '2')
+  ```git tag -s $(date +"%Y%m%d").2```
 6. Push changes
 7. Upload the source tarball with ```make dist upload```
 8. Update the package
